@@ -19,7 +19,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     url: "/movies",
      views: {
       "header": {
-        templateUrl: "partials/header.html"
+        templateUrl: "partials/header.html",
+        controller: "HeadersCtrl"
       },
       "body": {
         templateUrl: "partials/movies.html",
@@ -32,7 +33,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     url: "/:movieId",
     views: {
       "header": {
-        templateUrl: "partials/header.html"
+        templateUrl: "partials/header.html",
+        controller: "HeadersCtrl"
       },
       "body": {
         templateUrl: "partials/movies.reviews.html",
