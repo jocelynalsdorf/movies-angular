@@ -6,6 +6,7 @@
       <ul>
         <li ng-repeat="movie in movies">
           <a ui-sref="movies.reviews({movieId: movie.id})">{{movie.title}}</a>
+          <p movie-search> Get More Info on {{movie.title}}</p>
         </li>
       </ul>
     </div>
