@@ -1,0 +1,41 @@
+img {
+  width:150px;
+}
+
+.movie-card {
+  width:600px;
+  padding:20px;
+  background-color:#EBEBEB;
+  margin:0 auto 0 auto;
+}
+
+.margin-top-20 {
+  margin-top:10px;
+}
+
+.border-radius {
+  border-radius:5px;
+}
+.txt-right {
+  text-align: right;
+}
+.movie-poster {
+  max-height:300px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding:0;
+
+}
+
+li {
+  margin:0;
+  padding-left:0;
+  padding-top:5px;
+}
+
+h5 {
+  margin:0;
+}

@@ -1,24 +1,64 @@
 <div class="container">
 
   <div class="row">
-    <div ng-show="movies.length" class="col-md-6 all-movies-list">
-      <h2>All Movies that have reviews:</h2>
+    <div ng-show="movies.length" class="col-md-7 all-movies-list">
+      <h4>All Movies:</h4>
       <ul>
         <li ng-repeat="movie in movies">
-          <a ui-sref="movies.reviews({movieId: movie.id})">{{movie.title}}</a>
-          <p movie-search> Get More Info on {{movie.title}}</p>
+          <a ui-sref="movies.reviews({movieId: movie.id})">{{movie.title}}</a> | <span movie-search> Get More Info on {{movie.title}}</span>
+          <!--hidden div for movie data -->        
+          <div id="hidden-movie-data" class="movie-card border-radius margin-top-20" ng-show="showMovieDetails">
+
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="{{movieData.Poster}}"/>
+              </div>
+              <div class="col-sm-8">
+                
+                <div class="row margin-top-20">
+                  <div class="col-sm-4">
+                    <strong>Year: </strong>{{movieData.Year}}
+                  </div>
+                  <div class="col-sm-4">
+                    <strong>Genre: </strong>{{movieData.Genre}}
+                  </div>
+                  <div class="col-sm-4">
+                    <strong>Director: </strong>{{movieData.Director}}
+                  </div>
+                </div>
+                <div class="row margin-top-20">
+                  <div class="col-sm-12">
+                    <strong>Actors: </strong>{{movieData.Actors}}
+                  </div>
+                </div>
+                <div class="row margin-top-20">
+                  <div class="col-sm-12">
+                    <strong>Plot: </strong>{{movieData.Plot}}
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+          </div><!-- end of hidden div -->
         </li>
       </ul>
     </div>
-    <div class="col-md-6 add-movies-form-div">
-      <h2>Search for a Movie to Review:</h2>
-      <form ng-submit="MoviesFactory.getMovie()">
-        <div class="form-group">
-          <input type="text" ng-model="MoviesFactory.movieTitle" class="form-control" placeholder="Enter movie title"/>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+    <div class="col-md-5 add-movies-form-div">
+      <div>
+        <h2>Search for a Movie to Review:</h2>
+        <form ng-submit="MoviesFactory.getMovie()">
+          <div class="form-group">
+            <input type="text" ng-model="MoviesFactory.movieTitle" class="form-control" placeholder="Enter movie title"/>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div><!--end of add movie form div-->
+
+      
+    </div><!-- end of col-md-6-right -->
+
+
     <div ui-view="body"></div>
   </div><!--end of all movies list row -->
 
