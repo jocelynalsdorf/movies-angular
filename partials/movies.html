@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row">
+    <div ng-show="movies.length" class="col-md-6 all-movies-list">
+      <h2>All Movies that have reviews:</h2>
+      <ul>
+        <li ng-repeat="movie in movies">
+          <a ui-sref="movies.reviews({movieId: movie.id})">{{movie.title}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 add-movies-form-div">
+      <h2>Search for a Movie to Review:</h2>
+      <form ng-submit="MoviesFactory.getMovie()">
+        <div class="form-group">
+          <input type="text" ng-model="MoviesFactory.movieTitle" class="form-control" placeholder="Enter movie title"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div ui-view></div>
+  </div><!--end of all movies list row -->
+
+
+
+</div><!-- end of main container -->
