@@ -10,13 +10,13 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider.state('movies', {
     url: "/movies",
     templateUrl: "partials/movies.html",
-    controller: "moviesCtrl"
+    controller: "MoviesCtrl"
   });
 
   $stateProvider.state('movies.reviews', {
     url: "/:movieId",
     templateUrl: "partials/movies.reviews.html",
-    controller: "reviewsCtrl"
+    controller: "ReviewsCtrl"
   });
 
 });

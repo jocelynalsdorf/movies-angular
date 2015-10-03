@@ -1,4 +1,4 @@
-app.controller("reviewsCtrl", function($scope, $stateParams, UtilitiesFactory, MoviesFactory){
+app.controller("ReviewsCtrl", function ReviewsCtrl($scope, $stateParams, UtilitiesFactory, MoviesFactory){
   $scope.movie = MovieFactory.findById(MovieFactory.movies, $stateParams.movieId);
 
   $scope.addReview = function(){
