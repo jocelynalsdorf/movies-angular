@@ -6,7 +6,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     url: "",
     views: {
       "header": {
-        templateUrl: "partials/header.html"
+        templateUrl: "partials/header.html",
+        controller: "HeadersCtrl"
       },
        "body": {
          templateUrl: "partials/home.html"
