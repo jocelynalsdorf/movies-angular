@@ -23,6 +23,10 @@
   background-color: tomato;
   border:none;
 }
+.btn-default {
+  margin-top:5px;
+  margin-bottom: 5px;
+}
 span {
   font-size:18px;
 }
@@ -36,7 +40,11 @@ span {
   background-color:#EBEBEB;
   
 }
-
+.dog-img {
+  position: absolute;
+  top:265px;
+  left: 535px;
+}
 .margin-top-20 {
   margin-top:10px;
 }

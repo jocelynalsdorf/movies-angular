@@ -2,10 +2,10 @@
 
   <div class="row">
     <div ng-show="movies.length" class="col-md-7 all-movies-list">
-      <h4 class="text-center">All Movies:</h4>
+      <h4 class="text-center sub-title">All Movies:</h4>
       <ul>
         <li ng-repeat="movie in movies">
-          <button class="btn btn-default"><a ui-sref="movies.reviews({movieId: movie.id})">Review {{movie.title}}</a></button>
+          <button class="btn btn-default"><a ui-sref="movies.reviews({movieId: movie.id})"> Leave review for {{movie.title}}</a></button>
           <button class="btn btn-default" movie-search>Click for more Info on {{movie.title}}</button>
           <!--hidden div for movie data -->        
           <div id="hidden-movie-data" class="movie-card border-radius margin-top-20" ng-show="showMovieDetails">
@@ -15,7 +15,7 @@
                 <img class="data-img" src="{{movieData.Poster}}"/>
               </div>
               <div class="col-sm-8">
-                
+
                 <div class="row margin-top-20">
                   <div class="col-sm-4">
                     <strong>Year: </strong>{{movieData.Year}}
@@ -37,7 +37,7 @@
                     <strong>Plot: </strong>{{movieData.Plot}}
                   </div>
                 </div>
-               
+
               </div>
 
             </div>
@@ -57,9 +57,10 @@
       </div><!--end of add movie form div-->
 
       <div ui-view="body"></div>
+      <img class="dog-img" src="imgs/dog.jpg"/>
     </div><!-- end of col-md-6-right -->
 
-
+  
     
   </div><!--end of all movies list row -->
 
