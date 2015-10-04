@@ -2,16 +2,17 @@
 
   <div class="row">
     <div ng-show="movies.length" class="col-md-7 all-movies-list">
-      <h4>All Movies:</h4>
+      <h4 class="text-center">All Movies:</h4>
       <ul>
         <li ng-repeat="movie in movies">
-          <a ui-sref="movies.reviews({movieId: movie.id})">{{movie.title}}</a> | <span movie-search> Get More Info on {{movie.title}}</span>
+          <button class="btn btn-default"><a ui-sref="movies.reviews({movieId: movie.id})">Review {{movie.title}}</a></button>
+          <button class="btn btn-default" movie-search>Click for more Info on {{movie.title}}</button>
           <!--hidden div for movie data -->        
           <div id="hidden-movie-data" class="movie-card border-radius margin-top-20" ng-show="showMovieDetails">
 
             <div class="row">
               <div class="col-sm-4">
-                <img src="{{movieData.Poster}}"/>
+                <img class="data-img" src="{{movieData.Poster}}"/>
               </div>
               <div class="col-sm-8">
                 
@@ -46,7 +47,7 @@
     </div>
     <div class="col-md-5 add-movies-form-div">
       <div>
-        <h2>Search for a Movie to Review:</h2>
+        <h3 class="sub-title">Enter a Movie to Review:</h3>
         <form ng-submit="MoviesFactory.getMovie()">
           <div class="form-group">
             <input type="text" ng-model="MoviesFactory.movieTitle" class="form-control" placeholder="Enter movie title"/>

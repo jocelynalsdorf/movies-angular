@@ -1,6 +1,6 @@
 app.directive("hometext", function(){
   return {
-    template: "Back To The Start"
+    template: "Back Home"
   }
 });
 

@@ -1,4 +1,32 @@
-img {
+
+.title {
+  font-family: 'Fugaz One', cursive;
+  font-size:50px;
+  display:inline-block;
+  padding-right:15px;
+}
+
+.sub-title {
+  font-family: 'Fugaz One', cursive;
+  font-size: 25px;
+}
+.small-title {
+  color: crimson;
+  font-size: 22px;
+  margin-top: 60px;
+}
+.btn-primary {
+  background-color: crimson;
+  border:none;
+}
+.btn-primary:hover {
+  background-color: tomato;
+  border:none;
+}
+span {
+  font-size:18px;
+}
+.data-img {
   width:150px;
 }
 
@@ -6,7 +34,7 @@ img {
   width:600px;
   padding:20px;
   background-color:#EBEBEB;
-  margin:0 auto 0 auto;
+  
 }
 
 .margin-top-20 {
