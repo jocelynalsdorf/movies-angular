@@ -9,15 +9,15 @@ app.config(function($stateProvider, $urlRouterProvider){
         templateUrl: "partials/header.html",
         controller: "HeadersCtrl"
       },
-       "body": {
-         templateUrl: "partials/home.html"
-       },
-    }
-  });
+      "body": {
+       templateUrl: "partials/home.html"
+     },
+   }
+ });
 
   $stateProvider.state('movies', {
     url: "/movies",
-     views: {
+    views: {
       "header": {
         templateUrl: "partials/header.html",
         controller: "HeadersCtrl"
@@ -25,7 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       "body": {
         templateUrl: "partials/movies.html",
         controller: "MoviesCtrl"
-       },
+      },
     }
   });
 
@@ -39,7 +39,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       "body": {
         templateUrl: "partials/movies.reviews.html",
         controller: "ReviewsCtrl"
-       },
+      },
     }
   });
 
